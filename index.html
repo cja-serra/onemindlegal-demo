@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Mind Legal — Attorney-Supervised Paralegal Services</title>
+<meta name="description" content="One Mind Legal provides attorney-supervised paralegal services for family law and immigration matters in Greater Los Angeles & Long Beach. Bilingual. Flat fees. Free consultation.">
+<meta property="og:title" content="One Mind Legal | Paralegal Services Los Angeles">
+<meta property="og:description" content="Attorney-supervised paralegal services for family law and immigration in LA & Long Beach. Bilingual staff. Flat fees. Call (213) 278-4113.">
+<meta property="og:image" content="https://onemindlegal-demo.vercel.app/og-image.jpg">
+<meta property="og:url" content="https://onemindlegal-demo.vercel.app">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "One Mind Legal",
+  "description": "Attorney-supervised paralegal services for family law and immigration in Greater Los Angeles and Long Beach.",
+  "url": "https://onemindlegal-demo.vercel.app",
+  "telephone": ["(213) 278-4113", "(562) 676-5489"],
+  "email": "onemindlegal@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Los Angeles",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Los Angeles", "Long Beach"],
+  "serviceType": ["Family Law", "Immigration"],
+  "priceRange": "$$",
+  "availableLanguage": ["English", "Spanish"]
+}
+</script>
+<style>
+  :root {
+    --green-dark: #1a4a3a;
+    --green-mid: #245c49;
+    --green-light: #2f7a62;
+    --gold: #c9a84c;
+    --gold-light: #dfc07a;
+    --cream: #f7f3ec;
+    --cream-dark: #ede8df;
+    --white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-muted: #5a5a5a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
+
+  .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── NAV ── */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; background: rgba(26, 74, 58, 0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-icon { width: 36px; height: 36px; background: var(--gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); letter-spacing: 0.02em; line-height: 1.2; }
+  .nav-logo-text span { display: block; font-size: 0.65rem; font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--gold-light); letter-spacing: 0.12em; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.82); text-decoration: none; font-size: 0.875rem; font-weight: 400; letter-spacing: 0.04em; transition: color 0.2s; border-bottom: 2px solid transparent; padding-bottom: 2px; }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-links a.nav-active { color: var(--gold-light); border-bottom-color: var(--gold); }
+  .nav-cta { background: var(--gold); color: var(--green-dark) !important; font-weight: 600 !important; padding: 10px 22px; border-radius: 4px; transition: background 0.2s, transform 0.2s !important; border-bottom: none !important; }
+  .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+  .nav-cta.nav-active { border-bottom: none !important; }
+
+  /* Hamburger */
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 1001; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--gold-light); border-radius: 2px; transition: transform 0.25s ease, opacity 0.25s ease; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── HERO ── */
+  #hero { min-height: 100vh; padding-top: 72px; display: grid; grid-template-columns: 1fr 1fr; background: var(--green-dark); position: relative; overflow: hidden; }
+  .hero-bg-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(201,168,76,0.06) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 40%); pointer-events: none; }
+  .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 56px 80px 72px; position: relative; z-index: 2; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: var(--gold-light); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; width: fit-content; margin-bottom: 28px; animation: fadeInDown 0.8s ease forwards; }
+  @keyframes fadeInDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4vw, 3.6rem); font-weight: 900; line-height: 1.1; color: var(--white); margin-bottom: 12px; animation: fadeInUp 0.9s 0.1s ease both; }
+  .hero-headline em { font-style: italic; color: var(--gold); }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.72); line-height: 1.7; max-width: 460px; margin-bottom: 40px; font-weight: 300; animation: fadeInUp 0.9s 0.2s ease both; }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.9s 0.35s ease both; }
+  .btn-primary { background: var(--gold); color: var(--green-dark); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; padding: 14px 30px; border-radius: 4px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; letter-spacing: 0.02em; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
+  .btn-outline { background: transparent; color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; padding: 14px 30px; border-radius: 4px; text-decoration: none; border: 1px solid rgba(255,255,255,0.35); cursor: pointer; transition: border-color 0.2s, color 0.2s, transform 0.2s; }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); transform: translateY(-2px); }
+
+  .hero-right { display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; animation: fadeInUp 1s 0.2s ease both; background: linear-gradient(135deg, #1e5542 0%, #245c49 40%, #1a4a3a 100%); }
+  .hero-svg-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 60px 40px; width: 100%; }
+  .hero-svg-tagline { color: rgba(255,255,255,0.45); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; }
+
+  /* ── TRUST BAR ── */
+  #trust-bar { background: var(--gold); padding: 28px 72px; }
+  .trust-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; max-width: 1100px; margin: 0 auto; }
+  .trust-item { display: flex; align-items: center; gap: 14px; padding: 8px 24px; border-right: 1px solid rgba(26,74,58,0.2); }
+  .trust-item:last-child { border-right: none; }
+  .trust-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .trust-text strong { display: block; font-size: 0.85rem; font-weight: 700; color: var(--green-dark); letter-spacing: 0.02em; }
+  .trust-text span { font-size: 0.75rem; color: rgba(26,74,58,0.7); }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 72px; }
+  .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; line-height: 1.15; color: var(--green-dark); margin-bottom: 20px; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-photo-wrap { position: relative; }
+  .about-photo { width: 100%; aspect-ratio: 4/5; background: linear-gradient(160deg, #e8e3da 0%, #d4cec5 100%); border-radius: 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; position: relative; overflow: hidden; }
+  .about-photo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,74,58,0.08) 0%, transparent 60%); }
+  .about-photo-badge { position: absolute; bottom: -1px; left: -1px; right: -1px; background: var(--green-dark); padding: 20px 24px; display: flex; gap: 32px; }
+  .about-stat { text-align: center; flex: 1; }
+  .about-stat strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--gold); }
+  .about-stat span { font-size: 0.7rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.08em; }
+  .about-accent { position: absolute; top: -16px; left: -16px; width: 80px; height: 80px; border: 3px solid var(--gold); border-radius: 2px; z-index: 0; }
+  .about-photo-wrap > * { position: relative; z-index: 1; }
+  .about-content p { font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px; }
+  .about-content p:first-of-type { font-size: 1.15rem; color: var(--text-dark); }
+  .about-divider { width: 48px; height: 3px; background: var(--gold); margin: 24px 0; border-radius: 2px; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--cream); text-align: center; }
+  .services-intro { max-width: 580px; margin: 0 auto 60px; }
+  .services-intro p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
+  .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 900px; margin: 0 auto; }
+  .service-card { background: var(--white); border-radius: 2px; padding: 44px 40px; text-align: left; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid rgba(26,74,58,0.08); }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease; }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(26,74,58,0.12); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card-icon { font-size: 2rem; margin-bottom: 16px; }
+  .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin-bottom: 20px; }
+  .service-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .service-list li { font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
+  .service-list li::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+  /* ── WHY US ── */
+  #why-us { background: var(--green-dark); text-align: center; position: relative; overflow: hidden; }
+  #why-us::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.08) 0%, transparent 60%); pointer-events: none; }
+  #why-us .section-title { color: var(--white); }
+  #why-us > p { color: rgba(255,255,255,0.6); font-size: 1rem; margin-bottom: 60px; position: relative; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 960px; margin: 0 auto; position: relative; }
+  .why-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.2); border-radius: 2px; padding: 44px 32px; transition: background 0.3s, border-color 0.3s, transform 0.3s; }
+  .why-card:hover { background: rgba(255,255,255,0.09); border-color: var(--gold); transform: translateY(-4px); }
+  .why-number { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: rgba(201,168,76,0.25); line-height: 1; margin-bottom: 12px; }
+  .why-icon { font-size: 2rem; margin-bottom: 16px; }
+  .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+  .why-card p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--cream-dark); text-align: center; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1000px; margin: 48px auto 0; }
+  .testimonial-card { background: var(--white); border-radius: 2px; padding: 36px 32px; text-align: left; border-left: 4px solid var(--gold); box-shadow: 0 4px 24px rgba(26,74,58,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(26,74,58,0.12); }
+  .testimonial-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 16px; }
+  .testimonial-text { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
+  .testimonial-author { font-size: 0.82rem; font-weight: 600; color: var(--green-dark); letter-spacing: 0.04em; }
+  .testimonial-note { display: inline-block; margin-top: 40px; font-size: 0.72rem; color: rgba(26,74,58,0.4); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--white); display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: start; }
+  .contact-info .section-title { margin-bottom: 8px; }
+  .contact-lead { font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; }
+  .contact-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+  .contact-item-icon { width: 44px; height: 44px; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .contact-item-text strong { display: block; font-size: 0.78rem; font-weight: 600; color: var(--green-dark); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+  .contact-item-text a, .contact-item-text span { font-size: 0.95rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; display: block; }
+  .contact-item-text a:hover { color: var(--green-dark); }
+  .contact-form { background: var(--cream); padding: 44px; border-radius: 2px; border: 1px solid rgba(26,74,58,0.08); }
+  .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin-bottom: 28px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--green-dark); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--white); border: 1px solid rgba(26,74,58,0.2); border-radius: 3px; padding: 12px 16px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--text-dark); outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.12); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit { width: 100%; background: var(--green-dark); color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; padding: 14px; border: none; border-radius: 3px; cursor: pointer; letter-spacing: 0.04em; transition: background 0.2s, transform 0.2s; margin-top: 8px; }
+  .form-submit:hover { background: var(--green-mid); transform: translateY(-1px); }
+
+  /* Form success state */
+  .form-success { display: none; text-align: center; padding: 48px 24px; animation: fadeInUp 0.4s ease; }
+  .form-success-icon { width: 64px; height: 64px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.8rem; color: var(--green-dark); }
+  .form-success h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--green-dark); margin-bottom: 12px; }
+  .form-success p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+  .form-success a { color: var(--green-dark); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold); }
+
+  /* ── FOOTER ── */
+  footer { background: #0f2e23; padding: 48px 72px 32px; }
+  .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
+  .footer-brand .nav-logo-text { font-size: 1.2rem; margin-bottom: 12px; display: block; }
+  .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 280px; }
+  .footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+  .footer-col ul li a { color: rgba(255,255,255,0.5); text-decoration: none; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
+  .footer-col ul li a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 28px; }
+  .footer-disclaimer { font-size: 0.72rem; color: rgba(255,255,255,0.3); line-height: 1.7; text-align: center; max-width: 800px; margin: 0 auto; }
+
+  /* ── CHAT WIDGET ── */
+  .chat-trigger { position: fixed; bottom: 28px; right: 28px; z-index: 900; width: 60px; height: 60px; background: var(--green-dark); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 28px rgba(26,74,58,0.35); transition: transform 0.2s, box-shadow 0.2s; font-size: 1.5rem; }
+  .chat-trigger:hover { transform: scale(1.08); box-shadow: 0 12px 36px rgba(26,74,58,0.45); }
+  .chat-badge { position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 700; color: var(--green-dark); }
+  .chat-window { position: fixed; bottom: 104px; right: 28px; z-index: 900; width: 360px; max-height: 520px; background: var(--white); border-radius: 8px; box-shadow: 0 24px 64px rgba(0,0,0,0.15); display: flex; flex-direction: column; overflow: hidden; opacity: 0; transform: translateY(16px) scale(0.96); pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease; }
+  .chat-window.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: all; }
+  .chat-header { background: var(--green-dark); padding: 18px 20px; display: flex; align-items: center; gap: 12px; }
+  .chat-avatar { width: 36px; height: 36px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .chat-header-info { flex: 1; }
+  .chat-header-info strong { display: block; font-size: 0.88rem; font-weight: 600; color: var(--white); }
+  .chat-header-info span { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+  .chat-status { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; flex-shrink: 0; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .chat-consult-banner { background: var(--green-dark); border-bottom: 1px solid rgba(201,168,76,0.3); padding: 8px 16px; font-size: 0.72rem; font-weight: 600; color: var(--gold-light); text-align: center; letter-spacing: 0.06em; text-transform: uppercase; }
+  .chat-messages { flex: 1; overflow-y: auto; padding: 20px 16px; display: flex; flex-direction: column; gap: 14px; }
+  .chat-msg { display: flex; gap: 8px; animation: msgIn 0.3s ease; }
+  @keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .chat-msg.user { flex-direction: row-reverse; }
+  .chat-msg-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0; color: var(--gold); font-weight: 700; }
+  .chat-msg.user .chat-msg-avatar { background: var(--gold); color: var(--green-dark); }
+  .chat-msg-bubble { background: var(--cream); border-radius: 0 12px 12px 12px; padding: 10px 14px; font-size: 0.84rem; color: var(--text-dark); line-height: 1.5; max-width: 220px; }
+  .chat-msg.user .chat-msg-bubble { background: var(--green-dark); color: var(--white); border-radius: 12px 0 12px 12px; }
+  .chat-quick-replies { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 14px; }
+  .quick-reply { background: var(--cream); border: 1px solid rgba(26,74,58,0.2); color: var(--green-dark); font-family: 'DM Sans', sans-serif; font-size: 0.76rem; font-weight: 500; padding: 6px 12px; border-radius: 100px; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+  .quick-reply:hover { background: var(--green-dark); color: var(--white); border-color: var(--green-dark); }
+  .chat-input-area { border-top: 1px solid rgba(26,74,58,0.1); padding: 12px 16px; display: flex; gap: 8px; align-items: center; }
+  .chat-input { flex: 1; background: var(--cream); border: 1px solid rgba(26,74,58,0.15); border-radius: 100px; padding: 9px 16px; font-family: 'DM Sans', sans-serif; font-size: 0.84rem; outline: none; color: var(--text-dark); }
+  .chat-input:focus { border-color: var(--gold); }
+  .chat-send { width: 36px; height: 36px; background: var(--green-dark); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.9rem; transition: background 0.2s; flex-shrink: 0; }
+  .chat-send:hover { background: var(--green-mid); }
+
+  /* ── BACK TO TOP ── */
+  .back-to-top { position: fixed; bottom: 96px; right: 28px; z-index: 899; width: 44px; height: 44px; background: var(--green-dark); color: var(--gold); border: 2px solid var(--gold); border-radius: 50%; font-size: 1.3rem; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, transform 0.2s; display: flex; align-items: center; justify-content: center; line-height: 1; }
+  .back-to-top.visible { opacity: 1; visibility: visible; }
+  .back-to-top:hover { transform: translateY(-3px); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(26, 74, 58, 0.98);
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 16px 0 24px;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      backdrop-filter: blur(12px);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 14px 28px; font-size: 1rem; border-bottom: none; }
+    .nav-cta { margin: 8px 28px 0; display: inline-block; padding: 12px 24px; }
+
+    #hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 60px 32px; }
+    section { padding: 64px 32px; }
+    #about, #contact { grid-template-columns: 1fr; gap: 48px; }
+    .services-grid, .why-grid, .testimonials-grid { grid-template-columns: 1fr; }
+    .trust-inner { grid-template-columns: 1fr 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">⚖️</div>
+    <div class="nav-logo-text">One Mind Legal<span>Paralegal Services</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+  </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-left">
+    <div class="hero-badge">⚖️ Attorney-Supervised Services</div>
+    <h1 class="hero-headline">Affordable Legal Help.<br><em>Fast, Trusted &amp; Confidential.</em></h1>
+    <p class="hero-sub">One Mind Legal delivers professional paralegal services for families navigating Family Law and Immigration matters — at fees you can actually afford, backed by attorney oversight every step of the way.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Get a Free Consultation</a>
+      <a href="#services" class="btn-outline">See Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-svg-wrap">
+      <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:280px;max-width:80%;opacity:0.88;">
+        <!-- Glow rings -->
+        <circle cx="120" cy="130" r="100" stroke="#c9a84c" stroke-width="0.6" fill="none" opacity="0.10"/>
+        <circle cx="120" cy="130" r="78" stroke="#c9a84c" stroke-width="0.6" fill="none" opacity="0.14"/>
+        <!-- Center post -->
+        <rect x="118" y="44" width="4" height="158" rx="2" fill="#c9a84c"/>
+        <!-- Base plate -->
+        <rect x="76" y="200" width="88" height="10" rx="5" fill="#c9a84c"/>
+        <rect x="96" y="210" width="48" height="6" rx="3" fill="#c9a84c" opacity="0.7"/>
+        <!-- Top crossbar -->
+        <rect x="36" y="46" width="168" height="5" rx="2.5" fill="#c9a84c"/>
+        <!-- Top center cap -->
+        <circle cx="120" cy="42" r="9" fill="#c9a84c"/>
+        <circle cx="120" cy="42" r="5" fill="#1a4a3a"/>
+        <!-- Left suspension point -->
+        <circle cx="60" cy="51" r="4" fill="#c9a84c" opacity="0.7"/>
+        <!-- Right suspension point -->
+        <circle cx="180" cy="51" r="4" fill="#c9a84c" opacity="0.7"/>
+        <!-- Left chain (dashed lines) -->
+        <line x1="60" y1="55" x2="44" y2="108" stroke="#c9a84c" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.8"/>
+        <line x1="60" y1="55" x2="76" y2="108" stroke="#c9a84c" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.8"/>
+        <!-- Right chain -->
+        <line x1="180" y1="55" x2="164" y2="108" stroke="#c9a84c" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.8"/>
+        <line x1="180" y1="55" x2="196" y2="108" stroke="#c9a84c" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.8"/>
+        <!-- Left pan -->
+        <ellipse cx="60" cy="112" rx="26" ry="6" fill="#1e5542" stroke="#c9a84c" stroke-width="1.8"/>
+        <path d="M34 112 Q60 126 86 112" stroke="#c9a84c" stroke-width="1.8" fill="none"/>
+        <!-- Right pan (slightly lower — scales are unbalanced, human element) -->
+        <ellipse cx="180" cy="117" rx="26" ry="6" fill="#1e5542" stroke="#c9a84c" stroke-width="1.8"/>
+        <path d="M154 117 Q180 131 206 117" stroke="#c9a84c" stroke-width="1.8" fill="none"/>
+        <!-- Small document icon on left pan -->
+        <rect x="51" y="98" width="18" height="22" rx="2" fill="#c9a84c" opacity="0.35"/>
+        <line x1="54" y1="104" x2="66" y2="104" stroke="#c9a84c" stroke-width="1.2" opacity="0.7"/>
+        <line x1="54" y1="108" x2="66" y2="108" stroke="#c9a84c" stroke-width="1.2" opacity="0.7"/>
+        <line x1="54" y1="112" x2="62" y2="112" stroke="#c9a84c" stroke-width="1.2" opacity="0.7"/>
+      </svg>
+      <p class="hero-svg-tagline">Justice · Balance · Advocacy</p>
+    </div>
+  </div>
+</section>
+
+<div id="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item fade-up"><div class="trust-icon">🏛️</div><div class="trust-text"><strong>Attorney Supervised</strong><span>All work reviewed by counsel</span></div></div>
+    <div class="trust-item fade-up"><div class="trust-icon">⚡</div><div class="trust-text"><strong>Fast Turnaround</strong><span>Efficient, timely document prep</span></div></div>
+    <div class="trust-item fade-up"><div class="trust-icon">🌎</div><div class="trust-text"><strong>Bilingual Support</strong><span>English &amp; Spanish services</span></div></div>
+    <div class="trust-item fade-up"><div class="trust-icon">🔒</div><div class="trust-text"><strong>Trusted &amp; Confidential</strong><span>Your information stays private</span></div></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="about-photo-wrap fade-up">
+    <div class="about-accent"></div>
+    <div class="about-photo">
+      <svg width="120" height="160" viewBox="0 0 120 160" fill="none" style="opacity:0.22">
+        <circle cx="60" cy="50" r="36" fill="#1a4a3a"/>
+        <path d="M0 160 Q0 105 60 105 Q120 105 120 160 Z" fill="#1a4a3a"/>
+      </svg>
+      <p style="color:rgba(0,0,0,0.3);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;">📸 Photo Placeholder</p>
+      <div class="about-photo-badge">
+        <div class="about-stat"><strong>[XX]+</strong><span>Years Experience</span></div>
+        <div class="about-stat"><strong>[XXX]+</strong><span>Cases Handled</span></div>
+        <div class="about-stat"><strong>[XX]%</strong><span>Client Satisfaction</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="about-content fade-up">
+    <span class="section-label">About One Mind Legal</span>
+    <h2 class="section-title">Dedicated to Families.<br>Committed to Results.</h2>
+    <div class="about-divider"></div>
+    <p>[Replace with 2–3 sentences about your background, your experience, and what drives you to serve families through paralegal work.]</p>
+    <p>At One Mind Legal, we believe that quality legal document preparation shouldn't be out of reach. Whether you're working through a divorce, fighting for custody, or navigating the immigration system, we stand beside you with expert guidance, compassion, and transparency.</p>
+    <a href="#contact" class="btn-primary" style="margin-top:8px;display:inline-block;">Work With Us</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="services-intro fade-up">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Our Practice Areas</h2>
+    <p>We provide professional, attorney-supervised document preparation services across two core areas. No matter how complex your situation, we're here to help you move forward with confidence.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-up">
+      <div class="service-card-icon">👨‍👩‍👧</div>
+      <h3>Family Law</h3>
+      <ul class="service-list">
+        <li>Divorce</li><li>Custody &amp; Visitation</li><li>Paternity</li><li>Name Change</li><li>Other Family Law Matters</li>
+      </ul>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-card-icon">🌐</div>
+      <h3>Immigration</h3>
+      <ul class="service-list">
+        <li>Green Card</li><li>Citizenship &amp; Naturalization</li><li>Green Card Renewal</li><li>Spouse Petition</li><li>K1 / Fiancé Visa</li><li>Family Petition</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="why-us">
+  <span class="section-label fade-up">Why Choose Us</span>
+  <h2 class="section-title fade-up">The One Mind Difference</h2>
+  <p class="fade-up">Three reasons our clients trust us with their most important legal matters.</p>
+  <div class="why-grid">
+    <div class="why-card fade-up"><div class="why-number">01</div><div class="why-icon">🏛️</div><h3>Attorney Supervised</h3><p>Every document we prepare is reviewed under attorney oversight, giving you the confidence that your paperwork meets legal standards.</p></div>
+    <div class="why-card fade-up"><div class="why-number">02</div><div class="why-icon">💼</div><h3>Affordable Flat Fees</h3><p>Transparent, flat-fee pricing means no billing surprises. Quality legal document preparation without the full attorney price tag.</p></div>
+    <div class="why-card fade-up"><div class="why-number">03</div><div class="why-icon">🤝</div><h3>Personal Attention</h3><p>You're not a case number. As a solo practice, we give every client the dedicated, one-on-one attention your family deserves.</p></div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="fade-up" style="text-align:center;">
+    <span class="section-label">Client Stories</span>
+    <h2 class="section-title" style="color:var(--green-dark);">What Our Clients Say</h2>
+    <p style="color:var(--text-muted);font-size:1rem;max-width:520px;margin:0 auto;">Real families. Real results. Here's what clients say about working with One Mind Legal.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"One Mind Legal helped me through my divorce with clarity and compassion. The process was explained step by step and the flat fee meant no surprises."</p>
+      <div class="testimonial-author">— Maria G., Los Angeles</div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"I was nervous about my immigration paperwork. The bilingual staff made everything so much easier. I felt supported the whole time."</p>
+      <div class="testimonial-author">— Carlos R., Long Beach</div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Professional, fast, and affordable. They handled my child custody modification and kept me informed every step of the way."</p>
+      <div class="testimonial-author">— Jennifer T., Compton</div>
+    </div>
+  </div>
+  <p class="testimonial-note fade-up">* Placeholder testimonials — replace with real client reviews before going live</p>
+</section>
+
+<section id="contact">
+  <div class="contact-info fade-up">
+    <span class="section-label">Get In Touch</span>
+    <h2 class="section-title">Start With a Free Consultation</h2>
+    <p class="contact-lead">No pressure, no commitment. Tell us what you're going through and we'll let you know exactly how we can help — and what it will cost.</p>
+    <div class="contact-item"><div class="contact-item-icon">📞</div><div class="contact-item-text"><strong>Phone</strong><a href="tel:2132784113">(213) 278-4113</a><a href="tel:5626765489">(562) 676-5489</a></div></div>
+    <div class="contact-item"><div class="contact-item-icon">✉️</div><div class="contact-item-text"><strong>Email</strong><a href="mailto:onemindlegal@gmail.com">onemindlegal@gmail.com</a></div></div>
+    <div class="contact-item"><div class="contact-item-icon">📍</div><div class="contact-item-text"><strong>Service Area</strong><span>Greater Los Angeles &amp; Long Beach</span></div></div>
+  </div>
+  <div class="contact-form fade-up">
+    <h3>Send Us a Message</h3>
+    <form id="contactForm">
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Maria" required></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Garcia" required></div>
+      </div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(213) 000-0000"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@email.com" required></div>
+      <div class="form-group">
+        <label>Service Area</label>
+        <select>
+          <option value="">Select a service...</option>
+          <optgroup label="Family Law">
+            <option>Divorce</option><option>Child Custody / Visitation</option><option>Paternity</option><option>Name Change</option><option>Other Family Law</option>
+          </optgroup>
+          <optgroup label="Immigration">
+            <option>Green Card</option><option>Citizenship / Naturalization</option><option>Green Card Renewal</option><option>Spouse Petition</option><option>K1 / Fiancé Visa</option><option>Family Petition</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="form-group"><label>Brief Description</label><textarea placeholder="Tell us a little about your situation..."></textarea></div>
+      <button type="submit" class="form-submit">Send My Inquiry →</button>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon">✓</div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for reaching out. We'll contact you within 1 business day.</p>
+      <p style="margin-top:10px;font-size:0.88rem;">Or call us now: <a href="tel:2132784113">(213) 278-4113</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="nav-logo-text" style="color:white;">One Mind Legal</span>
+      <p>Attorney-supervised paralegal document preparation services for families throughout the Greater Los Angeles area. Affordable. Confidential. Dependable.</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li>Divorce</li><li>Child Custody</li><li>Name Change</li><li>Green Card</li><li>Naturalization</li><li>Spouse Petition</li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="tel:2132784113">(213) 278-4113</a></li>
+      <li><a href="tel:5626765489">(562) 676-5489</a></li>
+      <li><a href="mailto:onemindlegal@gmail.com">onemindlegal@gmail.com</a></li>
+      <li>Los Angeles, CA</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-disclaimer"><strong style="color:rgba(255,255,255,0.5);">Legal Disclaimer:</strong> One Mind Legal is a paralegal service, not a law firm. We are not attorneys and cannot provide legal advice, represent clients in court, or practice law. All document preparation services are performed under the supervision of a licensed attorney. The information on this website is for general informational purposes only.</p>
+  </div>
+</footer>
+
+<div class="chat-trigger" id="chatTrigger" title="Chat with us">💬<div class="chat-badge">1</div></div>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-avatar">⚖️</div>
+    <div class="chat-header-info"><strong>Serra — One Mind Legal</strong><span>AI Assistant · Typically replies instantly</span></div>
+    <div class="chat-status"></div>
+  </div>
+  <div class="chat-consult-banner">📅 Book Your Free Consultation</div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg"><div class="chat-msg-avatar">⚖️</div><div class="chat-msg-bubble">Hi there! 👋 I'm Serra, your One Mind Legal assistant. How can I help you today?</div></div>
+    <div class="chat-msg"><div class="chat-msg-avatar">⚖️</div><div class="chat-msg-bubble">I can help with Family Law or Immigration questions, or connect you with our team.</div></div>
+  </div>
+  <div class="chat-quick-replies">
+    <button class="quick-reply" onclick="sendQuick('Family Law help')">Family Law</button>
+    <button class="quick-reply" onclick="sendQuick('Immigration services')">Immigration</button>
+    <button class="quick-reply" onclick="sendQuick('How much does it cost?')">Pricing</button>
+    <button class="quick-reply" onclick="sendQuick('Call me back')">Call Me Back</button>
+  </div>
+  <div class="chat-input-area">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Type a message…" onkeydown="if(event.key==='Enter') sendMsg()">
+    <button class="chat-send" onclick="sendMsg()">➤</button>
+  </div>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+<script>
+  // ── Scroll fade-in ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── Active nav highlighting ──
+  const sections = document.querySelectorAll('section[id], div[id="trust-bar"]');
+  const navAnchors = document.querySelectorAll('nav a[href^="#"]');
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navAnchors.forEach(a => { if (!a.classList.contains('nav-cta')) a.classList.remove('nav-active'); });
+        const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+        if (active && !active.classList.contains('nav-cta')) active.classList.add('nav-active');
+      }
+    });
+  }, { threshold: 0.35 });
+  sections.forEach(s => sectionObserver.observe(s));
+
+  // ── Hamburger menu ──
+  const hamburger = document.getElementById('navHamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // ── Chat widget ──
+  const trigger = document.getElementById('chatTrigger');
+  const win = document.getElementById('chatWindow');
+  trigger.addEventListener('click', () => {
+    win.classList.toggle('open');
+    trigger.querySelector('.chat-badge').style.display = 'none';
+  });
+
+  const demoReplies = {
+    'family law help': "We handle Divorce, Custody, Paternity, Name Changes, and more. Would you like to schedule a free consultation?",
+    'immigration services': "We assist with Green Cards, Naturalization, Spouse Petitions, K1 Visas, and Family Petitions. All under attorney supervision.",
+    'how much does it cost?': "We offer affordable flat fees — no surprises. Contact us for a free quote based on your specific situation.",
+    'call me back': "Of course! Please call us at (213) 278-4113 or (562) 676-5489, or fill out the contact form and we'll reach out shortly."
+  };
+
+  function addMsg(text, isUser) {
+    const messages = document.getElementById('chatMessages');
+    const msg = document.createElement('div');
+    msg.className = 'chat-msg' + (isUser ? ' user' : '');
+    msg.innerHTML = `<div class="chat-msg-avatar">${isUser ? 'You' : '⚖️'}</div><div class="chat-msg-bubble">${text}</div>`;
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+  function sendQuick(text) { sendWithText(text); }
+  function sendMsg() { const input = document.getElementById('chatInput'); if (!input.value.trim()) return; sendWithText(input.value.trim()); input.value = ''; }
+  function sendWithText(text) {
+    addMsg(text, true);
+    setTimeout(() => { addMsg(demoReplies[text.toLowerCase()] || "Thanks for reaching out! Our team will get back to you shortly. You can also call us at (213) 278-4113.", false); }, 700);
+  }
+
+  // ── Contact form success state ──
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    contactForm.style.display = 'none';
+    formSuccess.style.display = 'block';
+    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // ── Back to top ──
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 400);
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── Disable right-click ──
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+</script>
+</body>
+</html>
